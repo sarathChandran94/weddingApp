@@ -1,0 +1,203 @@
+.dateContainer {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.saveTheDate,
+.countdown {
+  width: 100%;
+  padding: 10px;
+  font-size: 7vw;
+  display: flex;
+  align-items: center;
+  height: 100px;
+  box-shadow: 0 4px 8px 0 black;
+  border-radius: 10px;
+  transition: 200ms;
+}
+
+.vl {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: scale(0.5) rotate(90deg);
+}
+
+.saveTheDate:hover,
+.countdown:hover {
+  background-color: burlywood;
+  box-shadow: 0 2px 4px 0 slategray;
+}
+.saveTheDate:hover p {
+  color: black;
+  text-shadow: 0 1px 2px darkred;
+}
+
+.saveTheDate:hover .vl,
+.countdown:hover .vl {
+  transform: scale(1) rotate(90deg);
+}
+
+.saveTheDate:hover img,
+.countdown:hover img,
+.saveTheDate:focus img,
+.countdown:focus img {
+  transform: scale(1.1);
+}
+
+.icon {
+  position: relative;
+  width: 20%;
+}
+
+.icon img {
+  transition: 200ms;
+  height: auto;
+  width: 100%;
+}
+
+.dates,
+.timer {
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.timer {
+  font-size: 0.5vw;
+}
+
+.dates {
+  flex-direction: column;
+}
+
+/* styling for countdown timer  */
+
+/* .flipcard {
+  position: relative;
+  color: #de4848;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3rem;
+  display: inline-flex;
+  flex-direction: column;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 0.1em;
+}
+
+.top {
+  background-color: #f7f7f7;
+  border-top-left-radius: 0.1em;
+  border-top-right-radius: 0.1em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+  animation: flip-top 1000ms ease-in infinite;
+  transform-origin: bottom;
+}
+
+.bottom {
+  background-color: white;
+  display: flex;
+  align-items: flex-end;
+  border-bottom-left-radius: 0.1em;
+  border-bottom-right-radius: 0.1em;
+  width: 100%;
+  bottom: 0;
+  animation: flip-bottom 1000ms ease-out infinite;
+  transform-origin: top;
+  transform: rotateX(90deg);
+}
+
+.top,
+.bottom,
+.flipcard::before,
+.flipcard::after {
+  height: 0.75em;
+  line-height: 1;
+  padding: 0.25em;
+  overflow: hidden;
+}
+.top,
+.flipcard::before {
+  background-color: #f7f7f7;
+  border-top-left-radius: 0.1em;
+  border-top-right-radius: 0.1em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.bottom,
+.flipcard::after {
+  background-color: white;
+  display: flex;
+  align-items: flex-end;
+  border-bottom-left-radius: 0.1em;
+  border-bottom-right-radius: 0.1em;
+}
+
+.top::before {
+  content: attr(data-value);
+  width: 100%;
+  position: absolute;
+  animation: flip-top 1000ms ease-in infinite;
+  transform-origin: bottom;
+}
+
+.bottom::after {
+  content: attr(data-set);
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  animation: flip-bottom 1000ms ease-out infinite;
+  transform-origin: top;
+  transform: rotateX(90deg);
+}
+
+@keyframes flip-top {
+  100% {
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+  }
+}
+
+@keyframes flip-bottom {
+  100% {
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    transform: rotateX(0deg);
+  }
+} */
+
+@media all and (min-width: 769px) {
+  .dateContainer {
+    flex-direction: row;
+  }
+
+  .saveTheDate,
+  .countdown {
+    width: 600px;
+    height: 200px;
+    font-size: 3vw;
+    padding: 20px;
+  }
+
+  .icon {
+    width: 25%;
+  }
+
+  .icon img {
+    transition: 250ms;
+    height: auto;
+    width: 100%;
+  }
+
+  .dates,
+  .timer {
+    width: 75%;
+  }
+}

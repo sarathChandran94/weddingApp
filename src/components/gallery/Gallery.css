@@ -1,0 +1,43 @@
+.galleryMainDiv h2 {
+  color: lightyellow;
+  padding: 5px;
+  background-color: darkslategray;
+}
+
+.gallery {
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  -webkit-background-image: repeating-linear-gradient(45deg, red, green, blue);
+  background-image: repeating-linear-gradient(45deg, red, yellow 1%, orange 2%);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.col {
+  flex: 100%;
+  max-width: 100%;
+  padding: 4px 4px;
+}
+
+.col img {
+  margin-top: 8px;
+  vertical-align: middle;
+  height: auto;
+  width: 100%;
+}
+
+@media screen and (min-width: 769px) {
+  .col {
+    flex: 33.33%;
+    max-width: 33.33%;
+  }
+  .col img {
+    height: auto;
+    width: 100%;
+  }
+}

@@ -1,0 +1,145 @@
+.aboutContainer {
+  padding: 30px 10px;
+}
+.aboutContainer h2 {
+  color: brown;
+  font-size: 9vw;
+  margin-bottom: 10px;
+  text-shadow: 0 1px 2px lightslategray;
+}
+.card {
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin-bottom: 20px;
+}
+.card::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.card.bride::before {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 40%,
+    rgba(0, 0, 0, 0.5) 60%
+  );
+}
+.card.groom::before {
+  background: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0) 40%,
+    rgba(0, 0, 0, 0.5) 60%
+  );
+}
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.verDiv {
+  display: none;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  height: auto;
+  padding: 6em 0.8em;
+}
+.cardContent.bride {
+  left: 52%;
+}
+.cardContent.groom {
+  right: 52%;
+}
+
+.cardContent p {
+  color: white;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 0 1px lightslategrey;
+  font-size: 4.2vw;
+}
+
+.cardContent h3 {
+  color: lightsalmon;
+  font-size: 5vw;
+  margin-bottom: 5px;
+}
+
+@media all and (min-width: 769px) {
+  .aboutContainer {
+    padding: 30px 0;
+  }
+  .aboutContainer h2 {
+    font-size: 5vw;
+    padding: 0 10px;
+  }
+
+  .card img {
+    width: 50%;
+    height: auto;
+  }
+
+  .verDiv {
+    display: block;
+    position: absolute;
+    top: 38.5%;
+    left: 24%;
+    transform: scale(0.85) rotate(90deg);
+  }
+
+  .cardBrideImage {
+    -webkit-mask-image: linear-gradient(
+      to left,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0.5) 40%,
+      rgba(255, 255, 255, 1) 60%
+    );
+    mask-image: linear-gradient(
+      to left,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0.5) 40%,
+      rgba(255, 255, 255, 1) 60%
+    );
+  }
+  .cardGroomImage {
+    transform: translateX(100%);
+    -webkit-mask-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0.5) 40%,
+      rgba(255, 255, 255, 1) 60%
+    );
+    mask-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0.5) 40%,
+      rgba(255, 255, 255, 1) 60%
+    );
+  }
+
+  .cardContent p {
+    color: black;
+    text-shadow: 0 2px 3px lightslategray;
+    font-size: 2.5vw;
+    padding: 1em 0;
+  }
+
+  .cardContent h3 {
+    color: brown;
+    font-size: 3.5vw;
+    text-shadow: 0 2px 3px lightslategray;
+  }
+
+  .card::before,
+  .card.bride::before,
+  .card.groom::before {
+    display: none;
+  }
+}

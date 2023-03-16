@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap");
+
+.title {
+  display: flex;
+  position: absolute;
+  height: auto;
+  max-width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 500px;
+  transform: translateZ(-5px) scale(1.5);
+  z-index: -1;
+}
+.title h1 {
+  font-family: "Dancing Script", cursive;
+  color: greenyellow;
+  font-size: 13vw;
+  text-shadow: 0 0 10px red;
+}
+
+@media all and (min-width: 769px) {
+  .title h1 {
+    font-size: 7vw;
+  }
+}
