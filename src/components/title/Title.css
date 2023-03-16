@@ -13,9 +13,9 @@
 }
 .title h1 {
   font-family: "Dancing Script", cursive;
-  color: greenyellow;
+  color: gold;
   font-size: 13vw;
-  text-shadow: 0 0 10px red;
+  text-shadow: 0 2px 4px black;
 }
 
 @media all and (min-width: 769px) {

@@ -1,4 +1,7 @@
 import "./Location.css"
+import locket from "../../assets/locket-svgrepo-com.svg"
+import locationPin from "../../assets/location-pokemon-svgrepo-com.svg"
+
 const Location = () => {
   return (
     <>
@@ -6,19 +9,29 @@ const Location = () => {
         {/* <h3>This is Locationdiv</h3> */}
         <div className="locDetails">
           <div className="timing">
-            <h3>Muhoortham</h3>
-            <p>
-              <big>10:00</big> am to <big> 11:00 </big>am
-            </p>
+            <div className="locDivIcon">
+              <img src={locket} alt="locket" />
+            </div>
+            <div className="content">
+              <h3>Muhoortham</h3>
+              <p>
+                <big>10:00</big> am to <big> 11:00 </big>am
+              </p>
+            </div>
           </div>
           <div className="venue">
-            <div className="venueAddress">
-              <h3>Venue</h3>
-              <p>
-                <big>Moolayil Auditorium</big>
-              </p>
-              <p>Neelikkad (Ramassery road),</p>
-              <p> Pudussery, Palakkad</p>
+            <div className="address">
+              <div className="locDivIcon">
+                <img src={locationPin} alt="locationPin" />
+              </div>
+              <div className="content">
+                <h3>Venue</h3>
+                <p>
+                  <big>Moolayil Auditorium</big>
+                </p>
+                <p>Neelikkad (Ramassery road),</p>
+                <p> Pudussery, Palakkad</p>
+              </div>
             </div>
             <div className="map">
               <iframe

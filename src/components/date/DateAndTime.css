@@ -1,3 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  transition: 200ms;
+}
 .dateContainer {
   display: flex;
   justify-content: space-around;
@@ -8,22 +13,24 @@
 
 .saveTheDate,
 .countdown {
+  position: relative;
   width: 100%;
+  height: 100px;
   padding: 10px;
   font-size: 7vw;
   display: flex;
   align-items: center;
-  height: 100px;
   box-shadow: 0 4px 8px 0 black;
   border-radius: 10px;
   transition: 200ms;
+  justify-content: space-around;
 }
 
 .vl {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: scale(0.5) rotate(90deg);
+  top: 40%;
+  left: -60%;
+  transform: scale(0.1) rotate(90deg);
 }
 
 .saveTheDate:hover,
@@ -38,7 +45,7 @@
 
 .saveTheDate:hover .vl,
 .countdown:hover .vl {
-  transform: scale(1) rotate(90deg);
+  transform: scale(0.15) rotate(90deg);
 }
 
 .saveTheDate:hover img,
@@ -55,8 +62,7 @@
 
 .icon img {
   transition: 200ms;
-  height: auto;
-  width: 100%;
+  width: 50px;
 }
 
 .dates,
@@ -76,6 +82,14 @@
 
 .dates {
   flex-direction: column;
+}
+
+.flip-countdown-piece {
+  padding: 0 0.5em;
+}
+.flip-countdown-title {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
 }
 
 /* styling for countdown timer  */
@@ -186,18 +200,13 @@
     padding: 20px;
   }
 
-  .icon {
-    width: 25%;
+  .vl {
+    top: 40%;
+    left: -50%;
   }
 
   .icon img {
     transition: 250ms;
-    height: auto;
-    width: 100%;
-  }
-
-  .dates,
-  .timer {
-    width: 75%;
+    width: 80px;
   }
 }

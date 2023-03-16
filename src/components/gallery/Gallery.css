@@ -1,7 +1,8 @@
 .galleryMainDiv h2 {
-  color: lightyellow;
-  padding: 5px;
-  background-color: darkslategray;
+  color: brown;
+  font-size: 7.5vw;
+  margin: 5px 10px;
+  text-shadow: 0 1px 2px lightslategray;
 }
 
 .gallery {
@@ -39,5 +40,10 @@
   .col img {
     height: auto;
     width: 100%;
+  }
+
+  .galleryMainDiv h2 {
+    font-size: 5vw;
+    padding: 0 10px;
   }
 }

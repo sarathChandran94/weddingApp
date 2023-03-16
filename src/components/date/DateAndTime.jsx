@@ -53,8 +53,8 @@ const DateAndTime = () => {
         <div className="saveTheDate">
           <div className="icon">
             <img src={Cal} alt="calenderIcon" />
-            <img src={SimpleDivider} className="vl" alt="divider" />
           </div>
+          <img src={SimpleDivider} className="vl" alt="divider" />
           <div className="dates">
             <h3>Save the Date</h3>
             <p>{date}</p>
@@ -63,8 +63,8 @@ const DateAndTime = () => {
         <div className="countdown">
           <div className="icon">
             <img src={Hourglass} alt="hourglassIcon" />
-            <img src={SimpleDivider} className="vl" alt="divider" />
           </div>
+          <img src={SimpleDivider} className="vl" alt="divider" />
           <div className="timer">
             <FlipCountdown
               size="small"

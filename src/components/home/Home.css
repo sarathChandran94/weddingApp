@@ -16,7 +16,7 @@ big {
   font-style: italic;
 }
 .wrapper {
-  height: 100vh;
+  height: 100svh;
   overflow-y: auto;
   overflow-x: hidden;
   perspective: 10px;
