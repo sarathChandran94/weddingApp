@@ -54,7 +54,7 @@ const DateAndTime = () => {
           <div className="icon">
             <img src={Cal} alt="calenderIcon" />
           </div>
-          <img src={SimpleDivider} className="vl" alt="divider" />
+          {/* <img src={SimpleDivider} className="vl" alt="divider" /> */}
           <div className="dates">
             <h3>Save the Date</h3>
             <p>{date}</p>
@@ -64,10 +64,10 @@ const DateAndTime = () => {
           <div className="icon">
             <img src={Hourglass} alt="hourglassIcon" />
           </div>
-          <img src={SimpleDivider} className="vl" alt="divider" />
+          {/* <img src={SimpleDivider} className="vl" alt="divider" /> */}
           <div className="timer">
             <FlipCountdown
-              size="small"
+              size="extra-small"
               hideYear
               // hideMonth
               endAt={"2023-04-30 10:00:00"}
