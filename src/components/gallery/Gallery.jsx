@@ -54,11 +54,11 @@ const Gallery = () => {
         { id: 0, sImgName: smImg1, mImgName: mImg1 },
         { id: 1, sImgName: smImg13, mImgName: mImg13 },
         { id: 2, sImgName: smImg20, mImgName: mImg20 },
-        { id: 3, sImgName: smImg11, mImgName: mImg11 },
+        // { id: 3, sImgName: smImg11, mImgName: mImg11 },
         { id: 4, sImgName: smImg6, mImgName: mImg6 },
         { id: 5, sImgName: smImg3, mImgName: mImg3 },
-        { id: 6, sImgName: smImg4, mImgName: mImg4 },
-        { id: 22, sImgName: smImg23, mImgName: mImg23 }
+        { id: 6, sImgName: smImg4, mImgName: mImg4 }
+        // { id: 22, sImgName: smImg23, mImgName: mImg23 }
       ]
     },
     {
@@ -68,9 +68,10 @@ const Gallery = () => {
         { id: 9, sImgName: smImg19, mImgName: mImg19 },
         { id: 17, sImgName: smImg18, mImgName: mImg18 },
         { id: 10, sImgName: smImg16, mImgName: mImg16 },
-        { id: 11, sImgName: smImg12, mImgName: mImg12 },
+        // { id: 11, sImgName: smImg12, mImgName: mImg12 },
         { id: 12, sImgName: smImg2, mImgName: mImg2 },
-        { id: 13, sImgName: smImg14, mImgName: mImg14 }
+        // { id: 13, sImgName: smImg14, mImgName: mImg14 }
+        { id: 19, sImgName: smImg15, mImgName: mImg15 }
       ]
     },
     {
@@ -78,10 +79,9 @@ const Gallery = () => {
         { id: 14, sImgName: smImg5, mImgName: mImg5 },
         { id: 15, sImgName: smImg8, mImgName: mImg8 },
         { id: 16, sImgName: smImg17, mImgName: mImg17 },
-        { id: 21, sImgName: smImg9, mImgName: mImg9 },
+        // { id: 21, sImgName: smImg9, mImgName: mImg9 },
         { id: 24, sImgName: smImg24, mImgName: mImg24 },
-        { id: 18, sImgName: smImg10, mImgName: mImg10 },
-        { id: 19, sImgName: smImg15, mImgName: mImg15 },
+        // { id: 18, sImgName: smImg10, mImgName: mImg10 },
         { id: 20, sImgName: smImg21, mImgName: mImg21 }
       ]
     }
@@ -89,7 +89,7 @@ const Gallery = () => {
   return (
     <>
       <div className="galleryMainDiv">
-        <h2>Engagement Photo Gallery</h2>
+        {/* <h2>Engagement Photo Gallery</h2> */}
         <div className="gallery">
           <div className="row">
             <div className="col">
