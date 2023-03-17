@@ -13,26 +13,29 @@ const Home = () => {
       <div className="wrapper">
         <div className="header">
           <div className="background">
-            <picture>
-              <source
-                className="portrait"
-                media="(max-width:767px)"
-                srcSet={bgImagePortrait}
-                alt="bgImagePortrait"
-              />
-              <source
-                className="landscape"
-                media="(min-width:768px)"
-                srcSet={bgImageLandscape}
-                alt="bgImageLandscape"
-              />
-              <img
-                className="portrait"
-                src={bgImagePortrait}
-                alt="bgImagePortrait"
-              />
-            </picture>
+            <div className="overlay">
+              <picture>
+                <source
+                  className="portrait"
+                  media="(max-width:767px)"
+                  srcSet={bgImagePortrait}
+                  alt="bgImagePortrait"
+                />
+                <source
+                  className="landscape"
+                  media="(min-width:768px)"
+                  srcSet={bgImageLandscape}
+                  alt="bgImageLandscape"
+                />
+                <img
+                  className="portrait"
+                  src={bgImagePortrait}
+                  alt="bgImagePortrait"
+                />
+              </picture>
+            </div>
           </div>
+
           <Title />
         </div>
         <div className="filler"></div>
