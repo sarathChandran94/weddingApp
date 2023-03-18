@@ -1,6 +1,6 @@
 import "./About.css"
-import SruthiImg from "../../assets/images/sruthi-fit.jpg"
-import HareeshImg from "../../assets/images/hareesh.jpg"
+import SruthiImg from "../../assets/images/sruthi-fit.webp"
+import HareeshImg from "../../assets/images/hareesh.webp"
 import VerDiv from "../../assets/cyberscooty-stylized-plant-separation.svg"
 const About = () => {
   return (
