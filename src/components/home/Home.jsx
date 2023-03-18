@@ -1,7 +1,7 @@
 import Title from "../title/Title"
 import "./Home.css"
-import bgImagePortrait from "../../assets/images/DSC_2718-portrait.jpg"
-import bgImageLandscape from "../../assets/images/landscape.jpg"
+import bgImagePortrait from "../../assets/images/DSC_2718-portrait.webp"
+import bgImageLandscape from "../../assets/images/landscape.webp"
 import Date from "../date/DateAndTime"
 import About from "../about/About"
 import Gallery from "../gallery/Gallery"
@@ -17,13 +17,13 @@ const Home = () => {
               <picture>
                 <source
                   className="portrait"
-                  media="(max-width:767px)"
+                  media="(max-width:768px)"
                   srcSet={bgImagePortrait}
                   alt="bgImagePortrait"
                 />
                 <source
                   className="landscape"
-                  media="(min-width:768px)"
+                  media="(min-width:769px)"
                   srcSet={bgImageLandscape}
                   alt="bgImageLandscape"
                 />
