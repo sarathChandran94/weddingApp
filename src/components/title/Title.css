@@ -18,6 +18,10 @@
   text-shadow: 0 2px 4px black;
 }
 
+.mainTitle.fade-in {
+  transition: opacity 2000ms ease-in;
+}
+
 @media all and (min-width: 769px) {
   .title h1 {
     font-size: 7vw;

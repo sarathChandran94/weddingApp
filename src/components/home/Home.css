@@ -10,7 +10,7 @@ big {
   font-style: italic;
 }
 .wrapper {
-  height: 100dvh;
+  height: 100svh;
   overflow-y: auto;
   overflow-x: hidden;
   perspective: 10px;
@@ -52,6 +52,15 @@ big {
     rgba(0, 0, 0, 0) 50%,
     rgba(0, 0, 0, 0.8) 70%
   );
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 500ms ease-in;
+}
+
+.fade-in.appear {
+  opacity: 1;
 }
 
 .filler {

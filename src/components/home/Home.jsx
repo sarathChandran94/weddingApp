@@ -2,46 +2,66 @@ import Title from "../title/Title"
 import "./Home.css"
 import bgImagePortrait from "../../assets/images/DSC_2718-portrait.webp"
 import bgImageLandscape from "../../assets/images/landscape.webp"
-import Date from "../date/DateAndTime"
+import DateAndTime from "../date/DateAndTime"
 import About from "../about/About"
 import Gallery from "../gallery/Gallery"
 import Location from "../Location/Location"
 import Divider from "../../assets/Vintage-Decorative-Divider.svg"
+import { useRef, useEffect } from "react"
 const Home = () => {
+  const bgImgRef = useRef()
+  const titleRef = useRef()
+
+  const appearOptions = {}
+
+  const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) {
+        return
+      } else {
+        entry.target.classList.add("appear")
+        appearOnScroll.unobserve(entry.target)
+      }
+    })
+  }, appearOptions)
+
+  useEffect(() => {
+    appearOnScroll.observe(bgImgRef.current)
+    appearOnScroll.observe(titleRef.current)
+  }, [])
+
   return (
     <>
       <div className="wrapper">
         <div className="header">
           <div className="background">
-            <div className="overlay">
-              <picture>
-                <source
-                  className="portrait"
-                  media="(max-width:768px)"
-                  srcSet={bgImagePortrait}
-                  alt="bgImagePortrait"
-                />
-                <source
-                  className="landscape"
-                  media="(min-width:769px)"
-                  srcSet={bgImageLandscape}
-                  alt="bgImageLandscape"
-                />
-                <img
-                  className="portrait"
-                  src={bgImagePortrait}
-                  alt="bgImagePortrait"
-                />
-              </picture>
-            </div>
+            <picture ref={bgImgRef} className="overlay fade-in">
+              <source
+                className="portrait"
+                media="(max-width:768px)"
+                srcSet={bgImagePortrait}
+                alt="bgImagePortrait"
+              />
+              <source
+                className="landscape"
+                media="(min-width:769px)"
+                srcSet={bgImageLandscape}
+                alt="bgImageLandscape"
+              />
+              <img
+                className="portrait"
+                src={bgImagePortrait}
+                alt="bgImagePortrait"
+              />
+            </picture>
           </div>
 
-          <Title />
+          <Title value={titleRef} />
         </div>
         <div className="filler"></div>
         <div className="mainBody">
           <img src={Divider} alt="divider" />
-          <Date />
+          <DateAndTime />
           <img src={Divider} alt="divider" />
           <About />
           <img src={Divider} alt="divider" />

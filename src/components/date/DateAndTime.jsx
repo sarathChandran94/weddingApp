@@ -4,6 +4,8 @@ import Cal from "../../assets/calendar.svg"
 import Hourglass from "../../assets/hourglass.svg"
 import SimpleDivider from "../../assets/simple_divider.svg"
 import FlipCountdown from "@rumess/react-flip-countdown"
+import { useRef } from "react"
+import { useEffect } from "react"
 
 const DateAndTime = () => {
   const dateFormat = new Intl.DateTimeFormat("en-in", { dateStyle: "full" })
@@ -15,6 +17,30 @@ const DateAndTime = () => {
   const timeUpFn = () => {
     alert("time's Up!!")
   }
+
+  // For fade animations
+
+  const dateRef = useRef()
+  const timerRef = useRef()
+  const myoptions = {
+    threshold: 1,
+    rootMargin: "0px 0px -50px 0px"
+  }
+
+  const revealOnScroll = new IntersectionObserver((entries, revealOnScroll) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return
+      else {
+        entry.target.classList.add("appear")
+        revealOnScroll.unobserve(entry.target)
+      }
+    })
+  }, myoptions)
+
+  useEffect(() => {
+    revealOnScroll.observe(dateRef.current)
+    revealOnScroll.observe(timerRef.current)
+  })
 
   // for BACKUP TIMER
   // const [timerDays, setTimerDays] = useState(Number)
@@ -50,7 +76,7 @@ const DateAndTime = () => {
   return (
     <>
       <div className="dateContainer">
-        <div className="saveTheDate">
+        <div ref={dateRef} className="saveTheDate fade-in">
           <div className="icon">
             <img src={Cal} alt="calenderIcon" />
           </div>
@@ -60,7 +86,7 @@ const DateAndTime = () => {
             <p>{date}</p>
           </div>
         </div>
-        <div className="countdown">
+        <div ref={timerRef} className="countdown fade-in">
           <div className="icon">
             <img src={Hourglass} alt="hourglassIcon" />
           </div>

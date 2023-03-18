@@ -36,6 +36,7 @@ import mImg21 from "../../assets/images/img21-m.webp"
 import mImg22 from "../../assets/images/img22-m.webp"
 import mImg24 from "../../assets/images/img24-m.webp"
 const Gallery = () => {
+  console.log("6Gallery")
   let Imgs = [
     {
       col1: [

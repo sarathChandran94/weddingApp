@@ -1,14 +1,39 @@
 import "./Location.css"
 import locket from "../../assets/locket-svgrepo-com.svg"
 import locationPin from "../../assets/location-pokemon-svgrepo-com.svg"
+import { useRef, useEffect } from "react"
 
 const Location = () => {
+  const timingRef = useRef()
+  const addressRef = useRef()
+
+  const options = {
+    threshold: 1
+  }
+  const revealOnScrollLocation = new IntersectionObserver(
+    (entries, revealOnScrollLocation) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return
+        else {
+          entry.target.classList.add("appear")
+          revealOnScrollLocation.unobserve(entry.target)
+        }
+      })
+    },
+    options
+  )
+
+  useEffect(() => {
+    revealOnScrollLocation.observe(timingRef.current)
+    revealOnScrollLocation.observe(addressRef.current)
+  })
+
   return (
     <>
       <div className="locationDiv">
         {/* <h3>This is Locationdiv</h3> */}
         <div className="locDetails">
-          <div className="timing">
+          <div ref={timingRef} className="timing slide-in fade-in">
             <div className="locDivIcon">
               <img src={locket} alt="locket" />
             </div>
@@ -20,7 +45,7 @@ const Location = () => {
             </div>
           </div>
           <div className="venue">
-            <div className="address">
+            <div ref={addressRef} className="address slide-in fade-in">
               <div className="locDivIcon">
                 <img src={locationPin} alt="locationPin" />
               </div>

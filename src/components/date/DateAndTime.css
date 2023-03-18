@@ -81,6 +81,17 @@
   flex-direction: column;
 }
 
+.saveTheDate.fade-in,
+.countdown.fade-in {
+  /* opacity: 0; */
+  transition: opacity 1000ms ease-in;
+}
+
+/* .saveTheDate.fade-in.appearNow,
+.countdown.fade-in.appearNow {
+  opacity: 1;
+} */
+
 .flip-countdown-title {
   font-family: "Playfair Display", serif;
   font-style: italic;

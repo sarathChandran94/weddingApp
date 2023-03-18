@@ -2,14 +2,43 @@ import "./About.css"
 import SruthiImg from "../../assets/images/sruthi-fit.webp"
 import HareeshImg from "../../assets/images/hareesh.webp"
 import VerDiv from "../../assets/cyberscooty-stylized-plant-separation.svg"
+import { useRef, useEffect } from "react"
 const About = () => {
+  const brideRef = useRef()
+  const groomRef = useRef()
+  // const gRef = useRef()
+  // const bRef = useRef()
+
+  const aboutoptions = {
+    threshold: 1
+    // rootMargin: "0px 0px 0px 0px"
+  }
+
+  const revealOnScrollAbout = new IntersectionObserver(
+    (entries, revealOnScrollAbout) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return
+        else {
+          entry.target.classList.add("appear")
+          revealOnScrollAbout.unobserve(entry.target)
+        }
+      })
+    },
+    aboutoptions
+  )
+
+  useEffect(() => {
+    revealOnScrollAbout.observe(brideRef.current)
+    revealOnScrollAbout.observe(groomRef.current)
+  })
+
   return (
     <>
       <div className="aboutContainer">
         <h2>About bride and groom</h2>
         <div className="card bride">
           <img src={SruthiImg} className="cardBrideImage" alt="sruthiImg" />
-          <div className="cardContent bride">
+          <div ref={brideRef} className="cardContent bride fade-in">
             <h3>The Bride...</h3>
             <p>
               <em>
@@ -23,7 +52,7 @@ const About = () => {
         </div>
         <div className="card groom">
           <img src={HareeshImg} className="cardGroomImage" alt="hareeshImg" />
-          <div className="cardContent groom">
+          <div ref={groomRef} className="cardContent groom fade-in">
             <h3>The Groom...</h3>
             <p>
               <em>

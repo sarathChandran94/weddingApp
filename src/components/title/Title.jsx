@@ -1,9 +1,11 @@
 import "./Title.css"
-const Title = () => {
+const Title = (prop) => {
   return (
     <>
       <div className="title">
-        <h1 className="mainTitle">Sruthi & Hareesh</h1>
+        <h1 ref={prop.value} className="mainTitle fade-in">
+          Sruthi & Hareesh
+        </h1>
       </div>
     </>
   )
