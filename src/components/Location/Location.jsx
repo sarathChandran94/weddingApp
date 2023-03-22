@@ -33,7 +33,7 @@ const Location = () => {
       <div className="locationDiv">
         {/* <h3>This is Locationdiv</h3> */}
         <div className="locDetails">
-          <div ref={timingRef} className="timing slide-in fade-in">
+          <div ref={timingRef} className="timing fade-in">
             <div className="locDivIcon">
               <img src={locket} alt="locket" />
             </div>
@@ -45,7 +45,7 @@ const Location = () => {
             </div>
           </div>
           <div className="venue">
-            <div ref={addressRef} className="address slide-in fade-in">
+            <div ref={addressRef} className="address fade-in">
               <div className="locDivIcon">
                 <img src={locationPin} alt="locationPin" />
               </div>

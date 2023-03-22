@@ -3,11 +3,11 @@
 .title {
   display: flex;
   position: absolute;
-  height: auto;
-  max-width: 100%;
+  /* height: auto; */
+  /* max-width: 100%; */
   align-items: center;
   justify-content: center;
-  margin-top: 800px;
+  margin-top: 55em;
   transform: translateZ(-5px) scale(1.5);
   z-index: -1;
 }
@@ -19,10 +19,13 @@
 }
 
 .mainTitle.fade-in {
-  transition: opacity 2000ms ease-in;
+  transition: opacity 1000ms ease-in;
 }
 
 @media all and (min-width: 769px) {
+  .title {
+    margin-top: 50em;
+  }
   .title h1 {
     font-size: 7vw;
   }
