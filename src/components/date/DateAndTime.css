@@ -26,13 +26,28 @@
   justify-content: space-around;
 }
 
-.vl {
+.saveTheDate.rotate-in,
+.countdown.rotate-in {
+  transform: perspective(1000px) rotateX(90deg);
+  /* transition: rotateX 1000ms ease; */
+}
+
+.rotate-in.reveal {
+  transform: rotate(0deg);
+  transition: transform 300ms ease-in;
+}
+/* .reveal {
+  transform: rotateX(0deg);
+  transition: rotate 500ms ease-in;
+} */
+
+/* .vl {
   position: absolute;
   top: 40%;
   left: -60%;
   transition-duration: 200ms;
   transform: scale(0.1) rotate(90deg);
-}
+} */
 
 .saveTheDate:hover,
 .countdown:hover {
@@ -79,12 +94,6 @@
 
 .dates {
   flex-direction: column;
-}
-
-.saveTheDate.fade-in,
-.countdown.fade-in {
-  /* opacity: 0; */
-  transition: opacity 1000ms ease-in;
 }
 
 /* .saveTheDate.fade-in.appearNow,

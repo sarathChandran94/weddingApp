@@ -18,24 +18,28 @@ const DateAndTime = () => {
     alert("time's Up!!")
   }
 
-  // For fade animations
+  // fade animations using IntersectionObserver
 
   const dateRef = useRef()
   const timerRef = useRef()
   const myoptions = {
-    threshold: 1,
-    rootMargin: "0px 0px -50px 0px"
+    threshold: 1
   }
 
   const revealOnScroll = new IntersectionObserver((entries, revealOnScroll) => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return
       else {
-        entry.target.classList.add("appear")
+        // entry.target.classList.add("appear")
+        entry.target.classList.add("reveal")
         revealOnScroll.unobserve(entry.target)
       }
     })
   }, myoptions)
+
+  // fade animations using ScrollTimeline
+
+  // const animatedDateAndTimeCard = new ScrollTimeline()
 
   useEffect(() => {
     revealOnScroll.observe(dateRef.current)
@@ -76,7 +80,7 @@ const DateAndTime = () => {
   return (
     <>
       <div className="dateContainer">
-        <div ref={dateRef} className="saveTheDate fade-in">
+        <div ref={dateRef} className="saveTheDate rotate-in">
           <div className="icon">
             <img src={Cal} alt="calenderIcon" />
           </div>
@@ -86,7 +90,7 @@ const DateAndTime = () => {
             <p>{date}</p>
           </div>
         </div>
-        <div ref={timerRef} className="countdown fade-in">
+        <div ref={timerRef} className="countdown rotate-in">
           <div className="icon">
             <img src={Hourglass} alt="hourglassIcon" />
           </div>
