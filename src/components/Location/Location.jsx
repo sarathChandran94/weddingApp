@@ -31,7 +31,6 @@ const Location = () => {
   return (
     <>
       <div className="locationDiv">
-        {/* <h3>This is Locationdiv</h3> */}
         <div className="locDetails">
           <div ref={timingRef} className="timing fade-in">
             <div className="locDivIcon">

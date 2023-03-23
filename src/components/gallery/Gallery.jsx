@@ -72,7 +72,6 @@ const Gallery = () => {
   return (
     <>
       <div className="galleryMainDiv">
-        {/* <h2>Engagement Photo Gallery</h2> */}
         <div className="gallery">
           <div className="row">
             <div className="col">

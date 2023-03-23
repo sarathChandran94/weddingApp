@@ -1,11 +1,8 @@
 import "./DateAndTime.css"
-// import { useEffect, useState, useRef } from "react"
+import { useEffect, useRef } from "react"
 import Cal from "../../assets/calendar.svg"
 import Hourglass from "../../assets/hourglass.svg"
-import SimpleDivider from "../../assets/simple_divider.svg"
 import FlipCountdown from "@rumess/react-flip-countdown"
-import { useRef } from "react"
-import { useEffect } from "react"
 
 const DateAndTime = () => {
   const dateFormat = new Intl.DateTimeFormat("en-in", { dateStyle: "full" })
@@ -36,10 +33,6 @@ const DateAndTime = () => {
       }
     })
   }, myoptions)
-
-  // fade animations using ScrollTimeline
-
-  // const animatedDateAndTimeCard = new ScrollTimeline()
 
   useEffect(() => {
     revealOnScroll.observe(dateRef.current)
@@ -84,7 +77,6 @@ const DateAndTime = () => {
           <div className="icon">
             <img src={Cal} alt="calenderIcon" />
           </div>
-          {/* <img src={SimpleDivider} className="vl" alt="divider" /> */}
           <div className="dates">
             <h3>Save the Date</h3>
             <p>{date}</p>
@@ -94,7 +86,6 @@ const DateAndTime = () => {
           <div className="icon">
             <img src={Hourglass} alt="hourglassIcon" />
           </div>
-          {/* <img src={SimpleDivider} className="vl" alt="divider" /> */}
           <div className="timer">
             <FlipCountdown
               size="extra-small"

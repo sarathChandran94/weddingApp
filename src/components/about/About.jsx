@@ -6,12 +6,9 @@ import { useRef, useEffect } from "react"
 const About = () => {
   const brideRef = useRef()
   const groomRef = useRef()
-  // const gRef = useRef()
-  // const bRef = useRef()
 
   const aboutoptions = {
     threshold: 1
-    // rootMargin: "0px 0px 0px 0px"
   }
 
   const revealOnScrollAbout = new IntersectionObserver(

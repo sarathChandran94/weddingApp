@@ -1,11 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-/* * {
-  transition: 200ms;
-} */
 .dateContainer {
   display: flex;
-  justify-content: space-around;
   padding: 10px;
   flex-direction: column;
   gap: 20px;
@@ -14,10 +10,9 @@
 .saveTheDate,
 .countdown {
   position: relative;
-  width: 100%;
   height: 100px;
   padding: 10px;
-  font-size: 7vw;
+  font-size: 5vw;
   display: flex;
   align-items: center;
   box-shadow: 0 4px 8px 0 black;
@@ -29,25 +24,12 @@
 .saveTheDate.rotate-in,
 .countdown.rotate-in {
   transform: perspective(1000px) rotateX(90deg);
-  /* transition: rotateX 1000ms ease; */
 }
 
 .rotate-in.reveal {
   transform: rotate(0deg);
   transition: transform 300ms ease-in;
 }
-/* .reveal {
-  transform: rotateX(0deg);
-  transition: rotate 500ms ease-in;
-} */
-
-/* .vl {
-  position: absolute;
-  top: 40%;
-  left: -60%;
-  transition-duration: 200ms;
-  transform: scale(0.1) rotate(90deg);
-} */
 
 .saveTheDate:hover,
 .countdown:hover {
@@ -71,40 +53,25 @@
   transform: scale(1.1);
 }
 
-.icon {
-  position: relative;
-  width: 20%;
-}
-
 .icon img {
   transition: 200ms;
-  width: 65px;
+  width: 45px;
 }
 
 .dates,
 .timer {
   align-items: center;
   justify-content: center;
-  width: 70%;
   display: flex;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
 }
 
 .dates {
   flex-direction: column;
 }
 
-/* .saveTheDate.fade-in.appearNow,
-.countdown.fade-in.appearNow {
-  opacity: 1;
-} */
-
 .flip-countdown-title {
   font-family: "Playfair Display", serif;
   font-style: italic;
-  /* font-size: 1vw; */
 }
 
 /* styling for countdown timer  */
@@ -204,6 +171,7 @@
 
 @media all and (min-width: 769px) {
   .dateContainer {
+    justify-content: space-around;
     flex-direction: row;
   }
 
@@ -214,11 +182,6 @@
     font-size: 3vw;
     padding: 20px;
   }
-
-  /* .vl {
-    top: 40%;
-    left: -50%;
-  } */
 
   .icon img {
     transition: 250ms;
