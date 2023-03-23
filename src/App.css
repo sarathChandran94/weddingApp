@@ -5,6 +5,21 @@
   box-sizing: border-box;
 }
 
+h2,
+h3,
+p,
+em,
+big {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+}
+
+h2,
+h3 {
+  color: brown;
+  text-shadow: 0 1px 2px lightslategray;
+}
+
 .App {
   background-color: white;
 }
