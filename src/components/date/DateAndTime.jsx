@@ -88,9 +88,9 @@ const DateAndTime = () => {
           </div>
           <div className="timer">
             <FlipCountdown
-              size="extra-small"
+              size="small"
               hideYear
-              // hideMonth
+              hideMonth
               endAt={"2023-04-30 10:00:00"}
               // onTimeUp={timeUpFn}
             />
