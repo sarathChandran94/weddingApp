@@ -222,8 +222,8 @@ const DateAndTime = () => {
                   size="small"
                   hideYear
                   hideMonth
-                  // endAt={"2023-04-30 10:00:00"}
-                  endAt={"2023-04-19 21:15:00"}
+                  endAt={"2023-04-30 10:45:00"}
+                  // endAt={"2023-04-19 21:15:00"}
                   onTimeUp={timeUpFn}
                 />
               </div>
