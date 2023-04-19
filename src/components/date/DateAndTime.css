@@ -19,6 +19,7 @@
   border-radius: 10px;
   transition: 200ms;
   justify-content: space-around;
+  overflow: hidden;
 }
 
 .saveTheDate.rotate-in,
@@ -72,6 +73,21 @@
 .flip-countdown-title {
   font-family: "Playfair Display", serif;
   font-style: italic;
+}
+
+.congrats {
+  position: absolute;
+}
+
+.confetti {
+  width: 100%;
+  /* max-height: 100px; */
+  position: absolute;
+  left: 0;
+  top: -500%;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  user-select: none;
 }
 
 /* styling for countdown timer  */
@@ -177,14 +193,30 @@
 
   .saveTheDate,
   .countdown {
+    /* position: relative; */
     width: 600px;
     height: 200px;
     font-size: 3vw;
     padding: 20px;
+    overflow: hidden;
   }
 
   .icon img {
     transition: 250ms;
     width: 100px;
+  }
+
+  .congrats {
+    position: absolute;
+  }
+
+  .confetti {
+    max-width: 600px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    user-select: none;
   }
 }
