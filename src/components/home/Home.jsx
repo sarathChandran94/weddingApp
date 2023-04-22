@@ -1,6 +1,6 @@
 import Title from "../title/Title"
 import "./Home.css"
-import bgImagePortrait from "../../assets/images/welcomePic-mobile.webp"
+import bgImagePortrait from "../../assets/images/img-port.webp"
 import bgImageLandscape from "../../assets/images/welcomePic-web.webp"
 import DateAndTime from "../date/DateAndTime"
 import About from "../about/About"
