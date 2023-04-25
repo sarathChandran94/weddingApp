@@ -17,6 +17,17 @@ import smImg20 from "../../assets/images/img20-s.webp"
 import smImg21 from "../../assets/images/img21-s.webp"
 import smImg22 from "../../assets/images/img22-s.webp"
 import smImg24 from "../../assets/images/img24-s.webp"
+import smImg25 from "../../assets/images/img25-s.webp"
+import smImg26 from "../../assets/images/img26-s.webp"
+import smImg27 from "../../assets/images/img27-s.webp"
+import smImg28 from "../../assets/images/img28-s.webp"
+import smImg29 from "../../assets/images/img29-s.webp"
+import smImg30 from "../../assets/images/img30-s.webp"
+import smImg31 from "../../assets/images/img31-s.webp"
+import smImg32 from "../../assets/images/img32-s.webp"
+import smImg33 from "../../assets/images/img33-s.webp"
+import smImg34 from "../../assets/images/img34-s.webp"
+import smImg35 from "../../assets/images/img35-s.webp"
 import mImg1 from "../../assets/images/img1-m.webp"
 import mImg2 from "../../assets/images/img2-m.webp"
 import mImg3 from "../../assets/images/img3-m.webp"
@@ -35,10 +46,25 @@ import mImg20 from "../../assets/images/img20-m.webp"
 import mImg21 from "../../assets/images/img21-m.webp"
 import mImg22 from "../../assets/images/img22-m.webp"
 import mImg24 from "../../assets/images/img24-m.webp"
+import mImg25 from "../../assets/images/img25-m.webp"
+import mImg26 from "../../assets/images/img26-m.webp"
+import mImg27 from "../../assets/images/img27-m.webp"
+import mImg28 from "../../assets/images/img28-m.webp"
+import mImg29 from "../../assets/images/img29-m.webp"
+import mImg30 from "../../assets/images/img30-m.webp"
+import mImg31 from "../../assets/images/img31-m.webp"
+import mImg32 from "../../assets/images/img32-m.webp"
+import mImg33 from "../../assets/images/img33-m.webp"
+import mImg34 from "../../assets/images/img34-m.webp"
+import mImg35 from "../../assets/images/img35-m.webp"
 const Gallery = () => {
   let Imgs = [
     {
       col1: [
+        { id: 25, sImgName: smImg25, mImgName: mImg25 },
+        { id: 26, sImgName: smImg26, mImgName: mImg26 },
+        { id: 27, sImgName: smImg27, mImgName: mImg27 },
+        { id: 28, sImgName: smImg28, mImgName: mImg28 },
         { id: 0, sImgName: smImg1, mImgName: mImg1 },
         { id: 1, sImgName: smImg13, mImgName: mImg13 },
         { id: 2, sImgName: smImg20, mImgName: mImg20 },
@@ -49,6 +75,9 @@ const Gallery = () => {
     },
     {
       col2: [
+        { id: 30, sImgName: smImg30, mImgName: mImg30 },
+        { id: 31, sImgName: smImg31, mImgName: mImg31 },
+        { id: 32, sImgName: smImg32, mImgName: mImg32 },
         { id: 7, sImgName: smImg7, mImgName: mImg7 },
         { id: 8, sImgName: smImg22, mImgName: mImg22 },
         { id: 9, sImgName: smImg19, mImgName: mImg19 },
@@ -60,6 +89,10 @@ const Gallery = () => {
     },
     {
       col3: [
+        { id: 29, sImgName: smImg29, mImgName: mImg29 },
+        { id: 33, sImgName: smImg33, mImgName: mImg33 },
+        { id: 34, sImgName: smImg34, mImgName: mImg34 },
+        { id: 35, sImgName: smImg35, mImgName: mImg35 },
         { id: 14, sImgName: smImg5, mImgName: mImg5 },
         { id: 15, sImgName: smImg8, mImgName: mImg8 },
         { id: 16, sImgName: smImg17, mImgName: mImg17 },
